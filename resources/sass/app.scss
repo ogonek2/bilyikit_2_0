@@ -1,5 +1,144 @@
 @use '_variables.scss' as *;
 
-html, body{
+// CSS Reset & Base Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
     background-color: $body-bg;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+// Reset common elements
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input, textarea, select {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// Remove default button styles
+.btn {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+// Reset form elements
+form {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    padding: 0;
+}
+
+// Reset table styles
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th {
+    padding: 0;
+}
+
+// Remove focus outline for non-keyboard navigation
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+// Ensure proper box sizing
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+// Import content styles
+@import 'content.scss';
+
+// Lemon Tuesday Font Class
+.lemon-tuesday {
+    font-family: 'Lemon Tuesday', 'Caveat', 'Brush Script MT', cursive;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+}
+
+#app{
+    width: 100%;
+    main{
+        width: 100%;
+        section{
+            width: 100%;
+            padding: 0 0;
+            .container-fluid{
+                width: 100%;
+                padding: 25px 15px;
+                .row{
+                    width: 100%;
+                    max-width: 1920px;
+                    margin: 0 auto;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+.swiper, .swiper-container{
+    overflow: auto;
 }
