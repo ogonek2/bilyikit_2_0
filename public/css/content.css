@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .hero-section {
   position: relative;
   padding: 0px;
@@ -34,10 +35,11 @@
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
+  font-family: "Nunito Sans", "Nunito", system-ui, -apple-system, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: #4251DE;
+  line-height: 1;
 }
 .hero-content .location-info .location-icon {
   margin-right: 0.75rem;
@@ -48,9 +50,9 @@
 }
 .hero-content .hero-heading .heading-line {
   display: block;
-  font-family: "Inter", sans-serif;
-  font-size: 3.5rem;
-  font-weight: 800;
+  font-family: "Unbounded", "Inter", "Roboto", system-ui, -apple-system, sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
   line-height: 1.1;
   color: #000000;
   margin-bottom: 0.5rem;
@@ -60,12 +62,12 @@
   margin-bottom: 3rem;
 }
 .hero-content .service-details p {
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito Sans", "Nunito", system-ui, -apple-system, sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
   color: #6c757d;
   margin-bottom: 0.5rem;
-  line-height: 1.6;
+  line-height: 1;
 }
 .hero-content .cta-container .btn-courier {
   position: relative;
@@ -88,9 +90,9 @@
   padding: 1.25rem 2.5rem;
   height: 60px;
   border-radius: 50px;
-  font-family: "Inter", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-family: "Unbounded", "Inter", "Roboto", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -520,7 +522,8 @@
 .footwear-section .footwear-swiper .swiper-slide {
   height: auto;
 }
-.footwear-section .footwear-swiper .swiper-button-prev, .footwear-section .footwear-swiper .swiper-button-next {
+.footwear-section .footwear-swiper .swiper-button-prev,
+.footwear-section .footwear-swiper .swiper-button-next {
   color: #000000;
   width: 38px;
   height: 38px;
@@ -528,7 +531,8 @@
   background: rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(2px);
 }
-.footwear-section .footwear-swiper .swiper-button-prev::after, .footwear-section .footwear-swiper .swiper-button-next::after {
+.footwear-section .footwear-swiper .swiper-button-prev::after,
+.footwear-section .footwear-swiper .swiper-button-next::after {
   font-size: 18px;
   font-weight: 700;
 }
@@ -543,7 +547,8 @@
 .footwear-section .footwear-swiper .swiper-pagination-bullet-active {
   background: #4251DE;
 }
-.footwear-section .footwear-swiper .swiper-button-next, .footwear-section .footwear-swiper .swiper-button-prev {
+.footwear-section .footwear-swiper .swiper-button-next,
+.footwear-section .footwear-swiper .swiper-button-prev {
   background-color: #000000;
   color: #ffffff;
 }
@@ -601,7 +606,7 @@
 }
 .footwear-card__title {
   font-weight: 800;
-  font-family: "Nunito Sans", "Nunito", system-ui, -apple-system, sans-serif;
+  font-family: "Unbounded", "Inter", "Roboto", system-ui, -apple-system, sans-serif;
   color: #4251DE;
   margin: 8px 0 12px;
   font-size: 0.95rem;
@@ -640,7 +645,9 @@
 
 /* Grid behaviour on desktop */
 @media (min-width: 1200px) {
-  .footwear-section .footwear-swiper .swiper-button-prev, .footwear-section .footwear-swiper .swiper-button-next, .footwear-section .footwear-swiper .swiper-pagination {
+  .footwear-section .footwear-swiper .swiper-button-prev,
+  .footwear-section .footwear-swiper .swiper-button-next,
+  .footwear-section .footwear-swiper .swiper-pagination {
     display: none;
   }
 }
@@ -715,12 +722,12 @@
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #F9F9F9;
   gap: 16px;
   height: 48px;
   padding: 40px 22px;
   border-radius: 16px;
   border: 1px solid #4251DE;
-  background: #ffffff;
   color: #000000;
   font-family: "Nunito Sans", "Nunito", system-ui, -apple-system, sans-serif;
   font-weight: 700;
@@ -863,5 +870,457 @@
   .fr-panel__inner {
     width: 95%;
     margin: 20px;
+  }
+}
+/* Bags Section (slider similar to footwear) */
+.bags-section {
+  position: relative;
+  padding: 0 0 !important;
+  background: transparent;
+  margin-top: 300px;
+}
+.bags-section::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -200px;
+  bottom: -200px;
+  right: 0;
+  left: -400px;
+  background: url("/assets/svg/asset_06.svg");
+  background-size: 2800px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bags-section .container-fluid {
+  position: relative;
+  padding: 0 !important;
+  overflow: visible;
+  z-index: 10;
+  background-color: #171717;
+}
+.bags-section .container-fluid .row {
+  padding: 50px 0;
+}
+.bags-section .bags-heading {
+  font-family: "Unbounded", "Inter", "Roboto", system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin: 0 0 28px;
+}
+.bags-section .bags-swiper {
+  padding: 50px 100px 0;
+  /* Nav/Pagination visible on mobile, hidden on lg+ */
+}
+.bags-section .bags-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+.bags-section .bags-swiper .swiper-slide {
+  height: auto;
+}
+.bags-section .bags-swiper .swiper-button-prev,
+.bags-section .bags-swiper .swiper-button-next {
+  color: #000000;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(2px);
+}
+.bags-section .bags-swiper .swiper-button-prev::after,
+.bags-section .bags-swiper .swiper-button-next::after {
+  font-size: 18px;
+  font-weight: 700;
+}
+.bags-section .bags-swiper .swiper-pagination {
+  position: relative;
+  margin-top: 16px;
+}
+.bags-section .bags-swiper .swiper-pagination-bullet {
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
+.bags-section .bags-swiper .swiper-pagination-bullet-active {
+  background: #4251DE;
+}
+.bags-section .bags-swiper .swiper-button-next,
+.bags-section .bags-swiper .swiper-button-prev {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Bags Card */
+.bags-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  max-width: 400px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  /* Specific price badge styling for bags */
+}
+.bags-card__img {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.bags-card__img img {
+  max-width: 200px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+}
+.bags-card__title {
+  font-weight: 800;
+  font-family: "Unbounded", "Inter", "Roboto", system-ui, -apple-system, sans-serif;
+  color: #4251DE;
+  margin: 8px 0 4px;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+.bags-card__subtitle {
+  font-family: "Nunito Sans", "Nunito", system-ui, -apple-system, sans-serif;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 12px;
+}
+.bags-card__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.bags-card__list .txt {
+  color: #000000;
+  font-size: 0.95rem;
+  width: 100%;
+  max-width: 260px;
+  margin: 6px auto;
+}
+.bags-card .price-badge {
+  display: inline-block;
+  background: #D6FF6C;
+  color: #000000;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-family: "Nunito Sans", "Nunito", system-ui, -apple-system, sans-serif;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 1200px) {
+  .bags-section .bags-swiper .swiper-button-prev,
+  .bags-section .bags-swiper .swiper-button-next,
+  .bags-section .bags-swiper .swiper-pagination {
+    display: none;
+  }
+}
+@media (max-width: 1199.98px) {
+  .bags-section {
+    padding: 60px 0;
+  }
+  .bags-section .bags-swiper {
+    padding: 50px 50px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .bags-section {
+    padding: 48px 0;
+  }
+  .bags-section .bags-swiper {
+    padding: 50px 0 0 !important;
+  }
+  .bags-heading {
+    font-size: 1.75rem;
+    margin: 0 0 20px;
+  }
+  .bags-card {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .bags-card__img {
+    height: 120px;
+  }
+}
+@media (max-width: 467.98px) {
+  .bags-section .bags-swiper .bags-card {
+    max-width: 350px;
+  }
+}
+/* Clothing Section */
+.clothing-section {
+  position: relative;
+  padding: 100px 0;
+  background: transparent;
+  margin-top: 300px;
+  /* Desktop cards layout */
+  /* Background decorative elements */
+}
+.clothing-section .container-fluid {
+  position: relative;
+  z-index: 10;
+}
+.clothing-section .container-fluid .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+.clothing-section .clothing-content {
+  padding-right: 50px;
+  position: relative;
+  z-index: 10;
+}
+.clothing-section .clothing-content .clothing-heading {
+  font-family: "Unbounded", "Inter", "Roboto", system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: #000000;
+  margin: 0 0 24px;
+  width: 100%;
+  max-width: 459px;
+}
+.clothing-section .clothing-content .clothing-description {
+  font-family: "Nunito Sans", "Nunito", system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #6c757d;
+  margin: 0;
+  width: 100%;
+  max-width: 703px;
+}
+.clothing-section .clothing-cards-desktop {
+  display: none;
+  gap: 20px;
+  position: relative;
+  z-index: 10;
+  align-items: stretch;
+}
+.clothing-section .clothing-swiper {
+  display: none;
+  padding: 0;
+  position: relative;
+  /* Nav/Pagination visible on mobile, hidden on lg+ */
+}
+.clothing-section .clothing-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+.clothing-section .clothing-swiper .swiper-slide {
+  height: auto;
+}
+.clothing-section .clothing-swiper .swiper-button-prev,
+.clothing-section .clothing-swiper .swiper-button-next {
+  color: #000000;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(2px);
+}
+.clothing-section .clothing-swiper .swiper-button-prev::after,
+.clothing-section .clothing-swiper .swiper-button-next::after {
+  font-size: 18px;
+  font-weight: 700;
+}
+.clothing-section .clothing-swiper .swiper-pagination {
+  position: relative;
+  margin-top: 16px;
+}
+.clothing-section .clothing-swiper .swiper-pagination-bullet {
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
+.clothing-section .clothing-swiper .swiper-pagination-bullet-active {
+  background: #4251DE;
+}
+.clothing-section .clothing-swiper .swiper-button-next,
+.clothing-section .clothing-swiper .swiper-button-prev {
+  background-color: #000000;
+  color: #ffffff;
+}
+.clothing-section::before {
+  content: "";
+  position: absolute;
+  top: -360px;
+  left: 360px;
+  right: 0;
+  bottom: 0;
+  background: url("/assets/svg/asset_07.svg") no-repeat;
+  background-size: 268px;
+  background-position: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 1) Стоп переходов ширины/высоты у слайдера — частая причина дерганья */
+.clothing-swiper,
+.clothing-swiper .swiper-wrapper,
+.clothing-swiper .swiper-slide {
+  transition: none !important;
+}
+
+/* 2) Box-sizing, чтобы бордеры/паддинги не «раздували» вычисления */
+.clothing-section *, .clothing-section *::before, .clothing-section *::after {
+  box-sizing: border-box;
+}
+
+/* 3) Карточка — базово как было, НО без flex:1 глобально */
+.clothing-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  max-width: 600px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  flex: 1;
+  height: auto;
+  /* Specific price badge styling for clothing */
+}
+.clothing-card__title {
+  font-weight: 800;
+  font-family: "Unbounded", "Inter", "Roboto", system-ui, -apple-system, sans-serif;
+  color: #4251DE;
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+.clothing-card__material {
+  font-family: "Nunito Sans", "Nunito", system-ui, -apple-system, sans-serif;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+.clothing-card__list {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+.clothing-card__list .txt {
+  color: #000000;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 280px;
+  margin: 8px auto 0;
+  line-height: 1.4;
+}
+.clothing-card__note {
+  font-size: 0.8rem;
+  color: #6c757d;
+  padding-top: 16px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: auto;
+}
+.clothing-card .price-badge {
+  display: inline-block;
+  background: #D6FF6C;
+  color: #000000;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-family: "Nunito Sans", "Nunito", system-ui, -apple-system, sans-serif;
+  font-size: 0.9rem;
+}
+
+/* 4) Десктопный грид — тут как раз можно ограничить ширину и дать flex:1 */
+/* 5) Слайды на мобайле занимают всю ширину контейнера, карточка центрируется */
+.clothing-swiper .swiper-slide {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+
+/* 6) Внутри слайдера убираем растяжение карточки по флексу */
+.clothing-swiper .clothing-card {
+  flex: none;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* 7) На очень маленьких экранах — уже карточка, но всё ещё без влияния на ширину слайда */
+@media (max-width: 467.98px) {
+  .clothing-swiper .clothing-card {
+    max-width: 450px;
+  }
+}
+/* 8) Существующие брейкпоинты — без конфликтующих max-width на .clothing-card */
+@media (min-width: 1200px) {
+  .clothing-section .clothing-cards-desktop {
+    display: flex !important;
+  }
+  .clothing-section .clothing-swiper {
+    display: none !important;
+  }
+}
+@media (max-width: 1199.98px) {
+  .clothing-section {
+    padding: 80px 0;
+    margin-top: 100px;
+  }
+  .clothing-section .row {
+    padding: 0 50px !important;
+  }
+  .clothing-section .clothing-cards-desktop {
+    display: none !important;
+  }
+  .clothing-section .clothing-swiper {
+    display: block !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .clothing-section {
+    padding: 60px 0;
+  }
+  .clothing-section::before {
+    left: 170px;
+    top: -250px;
+    background-size: 200px;
+  }
+  .clothing-section .clothing-content {
+    padding-right: 0;
+    margin-bottom: 140px;
+    text-align: left;
+  }
+  .clothing-section .row {
+    padding: 0 25px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .clothing-section {
+    padding: 48px 0;
+  }
+  .clothing-section .row {
+    flex-direction: column;
+    padding: 0 !important;
+  }
+  .clothing-section .clothing-content .clothing-heading {
+    font-size: 1.75rem;
+    margin: 0 0 20px;
+  }
+  .clothing-section .clothing-content .clothing-description {
+    font-size: 0.95rem;
   }
 }

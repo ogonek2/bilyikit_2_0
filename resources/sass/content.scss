@@ -39,10 +39,11 @@
         display: flex;
         align-items: center;
         margin-bottom: 2rem;
-        font-family: 'Inter', sans-serif;
-        font-size: 1rem;
-        font-weight: 500;
+        font-family: $font-family-nunito-sans;
+        font-size: 1.2rem;
+        font-weight: 700;
         color: $color-blue-1;
+        line-height: 1;
 
         .location-icon {
             margin-right: 0.75rem;
@@ -55,9 +56,9 @@
 
         .heading-line {
             display: block;
-            font-family: 'Inter', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 800;
+            font-family: $font-family-unbounded;
+            font-size: 3rem;
+            font-weight: 600;
             line-height: 1.1;
             color: $color-black;
             margin-bottom: 0.5rem;
@@ -69,12 +70,12 @@
         margin-bottom: 3rem;
 
         p {
-            font-family: 'Inter', sans-serif;
+            font-family: $font-family-nunito-sans;
             font-size: 1.1rem;
             font-weight: 400;
             color: $color-gray-1;
             margin-bottom: 0.5rem;
-            line-height: 1.6;
+            line-height: 1;
         }
     }
 
@@ -102,9 +103,9 @@
                 padding: 1.25rem 2.5rem;
                 height: 60px;
                 border-radius: 50px;
-                font-family: 'Inter', sans-serif;
-                font-size: 1.1rem;
-                font-weight: 600;
+                font-family: $font-family-unbounded;
+                font-size: 16px;
+                font-weight: 400;
                 display: flex;
                 align-items: center;
                 gap: 1rem;
@@ -232,6 +233,7 @@
     .hero-illustration {
         position: relative;
         top: 0;
+
         svg {
             width: 100%;
             max-width: 400px;
@@ -330,6 +332,7 @@
                 }
             }
         }
+
         &.b-p {
             margin-left: auto;
             display: flex;
@@ -598,60 +601,96 @@
 
 
 /* Footwear Section */
-.footwear-section{
-	position: relative;
-	padding: 0 0 !important;
-	background: transparent; // пустой фон
-    
-	.container-fluid{ position: relative; }
+.footwear-section {
+    position: relative;
+    padding: 0 0 !important;
+    background: transparent; // пустой фон
 
-	.footwear-heading{
-		font-family: $font-family-unbounded;
-		font-weight: 600;
-		font-size: 2.25rem;
-		line-height: 1.2;
-		text-align: center;
-		letter-spacing: 0.02em;
-		color: $color-black;
-		margin: 0 0 28px;
-	}
+    .container-fluid {
+        position: relative;
+    }
 
-	/* Swiper container */
-	.footwear-swiper{
-		padding: 50px 100px 0;
-		.swiper-wrapper{ align-items: stretch; }
-		.swiper-slide{ height: auto; }
+    .footwear-heading {
+        font-family: $font-family-unbounded;
+        font-weight: 600;
+        font-size: 2.25rem;
+        line-height: 1.2;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: $color-black;
+        margin: 0 0 28px;
+    }
+
+    /* Swiper container */
+    .footwear-swiper {
+        padding: 50px 100px 0;
+
+        .swiper-wrapper {
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            height: auto;
+        }
+
         background: url("/assets/svg/asset_03.svg");
         background-size: 100%;
         background-repeat: no-repeat;
-		/* Nav/Pagination visible on mobile, hidden on lg+ */
-		.swiper-button-prev, .swiper-button-next{
-			color: $color-black;
-			width: 38px; height: 38px;
-			border-radius: 50%; background: rgba(0,0,0,.06);
-			backdrop-filter: blur(2px);
-			&::after{ font-size: 18px; font-weight: 700; }
-		}
-		.swiper-pagination{ position: relative; margin-top: 16px; }
-		.swiper-pagination-bullet{ background: rgba(0,0,0,.25); opacity: 1; }
-		.swiper-pagination-bullet-active{ background: $color-blue-1; }
-        .swiper-button-next, .swiper-button-prev{ background-color: $color-black; color: $color-white; }
-	}
+
+        /* Nav/Pagination visible on mobile, hidden on lg+ */
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: $color-black;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, .06);
+            backdrop-filter: blur(2px);
+
+            &::after {
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+
+        .swiper-pagination {
+            position: relative;
+            margin-top: 16px;
+        }
+
+        .swiper-pagination-bullet {
+            background: rgba(0, 0, 0, .25);
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: $color-blue-1;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            background-color: $color-black;
+            color: $color-white;
+        }
+    }
 }
 
 /* Card */
-.footwear-card{
-	background: #EFEFEF;
-	border-radius: 16px;
-	box-shadow: 0 2px 0 rgba(0,0,0,0.04);
-	padding: 24px 20px;
-	display: flex; flex-direction: column; height: 100%;
-	position: relative;
+.footwear-card {
+    background: #EFEFEF;
+    border-radius: 16px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
     width: 100%;
     text-align: center;
     max-width: 400px;
     padding-top: 40px;
-    &__sub{
+
+    &__sub {
         position: absolute;
         text-align: right;
         right: 20px;
@@ -662,7 +701,8 @@
         line-height: 22px;
         display: flex;
         color: $color-dark;
-        &::after{
+
+        &::after {
             content: '';
             background: url('/assets/svg/asset_04.svg');
             width: 16.29px;
@@ -674,72 +714,152 @@
             margin-left: 6px;
         }
     }
-	&__img{ height: 140px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;
-		img{ max-width: 200px; max-height: 120px; width: auto; height: auto; }
-	}
-	&__title{ font-weight: 800; font-family: $font-family-nunito-sans; color: $color-blue-1; margin: 8px 0 12px; font-size: 0.95rem; letter-spacing: 0.02em; }
-	&__list{ list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
-	&__list .txt{ color: $color-black; font-size: 0.95rem; width: 100%; max-width: 200px; margin: 6px auto; }
-	&__note{  font-size: 1rem; color: $color-gray-1; padding-top: 16px; text-align: left; }
+
+    &__img {
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+
+        img {
+            max-width: 200px;
+            max-height: 120px;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+        font-family: $font-family-unbounded;
+        color: $color-blue-1;
+        margin: 8px 0 12px;
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 14px;
+    }
+
+    &__list .txt {
+        color: $color-black;
+        font-size: 0.95rem;
+        width: 100%;
+        max-width: 200px;
+        margin: 6px auto;
+    }
+
+    &__note {
+        font-size: 1rem;
+        color: $color-gray-1;
+        padding-top: 16px;
+        text-align: left;
+    }
 }
 
-.price-badge{
-	display: inline-block;
-	background: #D6FF6C;
-	color: $color-black;
-	padding: 8px 14px;
-	border-radius: 8px;
-	font-weight: 800;
-	font-family: $font-family-nunito-sans;
+.price-badge {
+    display: inline-block;
+    background: #D6FF6C;
+    color: $color-black;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-family: $font-family-nunito-sans;
 }
 
 /* Grid behaviour on desktop */
-@media (min-width: 1200px){
-	.footwear-section{
-		.footwear-swiper{
-			.swiper-button-prev, .swiper-button-next, .swiper-pagination{ display: none; }
-		}
-	}
+@media (min-width: 1200px) {
+    .footwear-section {
+        .footwear-swiper {
+
+            .swiper-button-prev,
+            .swiper-button-next,
+            .swiper-pagination {
+                display: none;
+            }
+        }
+    }
 }
 
-@media (max-width: 1199.98px){
-	.footwear-section{ padding: 60px 0; }
-    .footwear-swiper{
+@media (max-width: 1199.98px) {
+    .footwear-section {
+        padding: 60px 0;
+    }
+
+    .footwear-swiper {
         padding: 50px 50px 0;
     }
 }
 
-@media (max-width: 767.98px){
-    .footwear-swiper{
+@media (max-width: 767.98px) {
+    .footwear-swiper {
         padding: 50px 0 0 !important;
-        .footwear-card{
+
+        .footwear-card {
             max-width: 450px;
             margin: 0 auto;
         }
     }
-	.footwear-section{ padding: 48px 0; }
-	.footwear-card{ &__img{ height: 120px; } }
+
+    .footwear-section {
+        padding: 48px 0;
+    }
+
+    .footwear-card {
+        &__img {
+            height: 120px;
+        }
+    }
 }
 
-@media (max-width: 467.98px){
-    .footwear-swiper{
-        .footwear-card{
+@media (max-width: 467.98px) {
+    .footwear-swiper {
+        .footwear-card {
             max-width: 350px;
         }
     }
 }
 
 /* Footwear Restoration (popups) */
-.footwear-rest{
-	position: relative; padding: 100px 0 !important; background: transparent;
-	&__heading{
-		font-family: $font-family-unbounded; font-weight: 600; font-size: 2.25rem; line-height: 1.25; color: $color-black; margin: 0 0 20px; width: 100%; max-width: 600px; position: relative; z-index: 10;
-	}
-	&__controls{ display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 24px; padding: 50px 0; position: relative; z-index: 10; }
-    .row{
+.footwear-rest {
+    position: relative;
+    padding: 100px 0 !important;
+    background: transparent;
+
+    &__heading {
+        font-family: $font-family-unbounded;
+        font-weight: 600;
+        font-size: 2.25rem;
+        line-height: 1.25;
+        color: $color-black;
+        margin: 0 0 20px;
+        width: 100%;
+        max-width: 600px;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-bottom: 24px;
+        padding: 50px 0;
+        position: relative;
+        z-index: 10;
+    }
+
+    .row {
         padding: 0 100px !important;
     }
-    &__illustration{
+
+    &__illustration {
         position: absolute;
         z-index: 1;
         right: 100px;
@@ -747,48 +867,680 @@
     }
 }
 
-.fr-btn{
-	width: 100%; max-width: 350px; display: inline-flex; justify-content: space-between; align-items: center; gap: 16px; height: 48px; padding: 40px 22px; border-radius: 16px; border: 1px solid $color-blue-1; background: $color-white; color: $color-black; font-family: $font-family-nunito-sans; font-weight: 700; transition: .2s ease;
-	&:hover{ background: rgba(66,81,222,.06); }
-	&__text{ white-space: nowrap; color: #4251DE; font-size: 16px; font-family: $font-family-unbounded; }
-	&__icon{ width: 38px; height: 38px; border-radius: 50%; border: 1px solid $color-blue-1; display: inline-flex; align-items: center; justify-content: center; position: relative; }
+.fr-btn {
+    width: 100%;
+    max-width: 350px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $body-bg;
+    gap: 16px;
+    height: 48px;
+    padding: 40px 22px;
+    border-radius: 16px;
+    border: 1px solid $color-blue-1;
+    color: $color-black;
+    font-family: $font-family-nunito-sans;
+    font-weight: 700;
+    transition: .2s ease;
+
+    &:hover {
+        background: rgba(66, 81, 222, .06);
+    }
+
+    &__text {
+        white-space: nowrap;
+        color: #4251DE;
+        font-size: 16px;
+        font-family: $font-family-unbounded;
+    }
+
+    &__icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1px solid $color-blue-1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
 }
 
-.footwear-rest__panels{ position: relative; }
-
-.fr-panel{ 
-	position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: .3s ease;
-	&.is-open{ opacity: 1; visibility: visible; }
-	&__inner{ 
-		background: $color-white; border-radius: 16px; max-width: 500px; width: 90%; max-height: 80vh; overflow-y: auto; position: relative;
-	}
-	&__close{ 
-		position: absolute; right: 16px; top: 16px; width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(0,0,0,.15); background: transparent; cursor: pointer; transition: .2s ease;
-		&:hover{ background: rgba(0,0,0,.05); }
-	}
-	&__close::before, &__close::after{ content: ''; position: absolute; left: 50%; top: 50%; width: 16px; height: 2px; background: rgba(0,0,0,.6); }
-	&__close::before{ transform: translate(-50%,-50%) rotate(45deg); }
-	&__close::after{ transform: translate(-50%,-50%) rotate(-45deg); }
-	&__title{ font-family: $font-family-unbounded; color: $color-blue-1; font-size: 1.5rem; margin: 0 0 16px; padding: 24px 24px 0; }
-	&__lead{ margin: 0 0 16px; color: $color-black; padding: 0 24px; }
-	&__list{ margin: 0 0 24px; padding: 0 24px 24px; display: grid; gap: 8px; color: $color-black; list-style: none; }
-	&__list li{ position: relative; padding-left: 20px; }
-	&__list li::before{ content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: $color-blue-1; }
+.footwear-rest__panels {
+    position: relative;
 }
 
-@media (max-width: 767.98px){
-	.footwear-rest{
+.fr-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+
+    &.is-open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__inner {
+        background: $color-white;
+        border-radius: 16px;
+        max-width: 500px;
+        width: 90%;
+        max-height: 80vh;
+        overflow-y: auto;
+        position: relative;
+    }
+
+    &__close {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, .15);
+        background: transparent;
+        cursor: pointer;
+        transition: .2s ease;
+
+        &:hover {
+            background: rgba(0, 0, 0, .05);
+        }
+    }
+
+    &__close::before,
+    &__close::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 16px;
+        height: 2px;
+        background: rgba(0, 0, 0, .6);
+    }
+
+    &__close::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &__close::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &__title {
+        font-family: $font-family-unbounded;
+        color: $color-blue-1;
+        font-size: 1.5rem;
+        margin: 0 0 16px;
+        padding: 24px 24px 0;
+    }
+
+    &__lead {
+        margin: 0 0 16px;
+        color: $color-black;
+        padding: 0 24px;
+    }
+
+    &__list {
+        margin: 0 0 24px;
+        padding: 0 24px 24px;
+        display: grid;
+        gap: 8px;
+        color: $color-black;
+        list-style: none;
+    }
+
+    &__list li {
+        position: relative;
+        padding-left: 20px;
+    }
+
+    &__list li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $color-blue-1;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footwear-rest {
         padding: 0 !important;
-        .row{
+
+        .row {
             padding: 0 0 !important;
         }
-        &__controls{ gap: 20px; padding: 20px 0; }
-        &__illustration{
+
+        &__controls {
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        &__illustration {
             position: static;
         }
     }
-    .fr-btn{
-        max-width: unset;       
+
+    .fr-btn {
+        max-width: unset;
     }
-    .fr-panel__inner{ width: 95%; margin: 20px; }
+
+    .fr-panel__inner {
+        width: 95%;
+        margin: 20px;
+    }
+}
+
+
+/* Bags Section (slider similar to footwear) */
+.bags-section {
+    position: relative;
+    padding: 0 0 !important;
+    background: transparent;
+    margin-top: 300px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -200px;
+        bottom: -200px;
+        right: 0;
+        left: -400px;
+        background: url("/assets/svg/asset_06.svg");
+        background-size: 2800px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .container-fluid {
+        position: relative;
+        padding: 0 !important;
+        overflow: visible; // Разрешаем дочерним элементам выходить за границы
+        z-index: 10;
+        background-color: $color-dark-2;
+
+        .row {
+            padding: 50px 0;
+        }
+    }
+
+    .bags-heading {
+        font-family: $font-family-unbounded;
+        font-weight: 600;
+        font-size: 2.25rem;
+        line-height: 1.2;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: $color-white;
+        margin: 0 0 28px;
+    }
+
+
+
+    .bags-swiper {
+        padding: 50px 100px 0;
+
+        .swiper-wrapper {
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            height: auto;
+        }
+
+        /* Nav/Pagination visible on mobile, hidden on lg+ */
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: $color-black;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, .06);
+            backdrop-filter: blur(2px);
+
+            &::after {
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+
+        .swiper-pagination {
+            position: relative;
+            margin-top: 16px;
+        }
+
+        .swiper-pagination-bullet {
+            background: rgba(0, 0, 0, .25);
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: $color-blue-1;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            background-color: $color-black;
+            color: $color-white;
+        }
+    }
+}
+
+/* Bags Card */
+.bags-card {
+    background: $color-white;
+    border-radius: 16px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    max-width: 400px;
+    border: 1px solid rgba(0, 0, 0, .08);
+
+    &__img {
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+
+        img {
+            max-width: 200px;
+            max-height: 120px;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+        font-family: $font-family-unbounded;
+        color: $color-blue-1;
+        margin: 8px 0 4px;
+        font-size: 1rem;
+        letter-spacing: 0.02em;
+    }
+
+    &__subtitle {
+        font-family: $font-family-nunito-sans;
+        font-size: .9rem;
+        color: $color-gray-1;
+        margin-bottom: 12px;
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 14px;
+    }
+
+    &__list .txt {
+        color: $color-black;
+        font-size: 0.95rem;
+        width: 100%;
+        max-width: 260px;
+        margin: 6px auto;
+    }
+
+    /* Specific price badge styling for bags */
+    .price-badge {
+        display: inline-block;
+        background: #D6FF6C;
+        color: $color-black;
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-weight: 800;
+        font-family: $font-family-nunito-sans;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bags-section {
+        .bags-swiper {
+
+            .swiper-button-prev,
+            .swiper-button-next,
+            .swiper-pagination {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .bags-section {
+        padding: 60px 0;
+    }
+
+    .bags-section .bags-swiper {
+        padding: 50px 50px 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bags-section {
+        padding: 48px 0;
+    }
+
+    .bags-section .bags-swiper {
+        padding: 50px 0 0 !important;
+    }
+
+    .bags-heading {
+        font-size: 1.75rem;
+        margin: 0 0 20px;
+    }
+
+    .bags-card {
+        max-width: 450px;
+        margin: 0 auto;
+
+        &__img {
+            height: 120px;
+        }
+    }
+}
+
+@media (max-width: 467.98px) {
+    .bags-section .bags-swiper {
+        .bags-card {
+            max-width: 350px;
+        }
+    }
+}
+
+/* Clothing Section */
+.clothing-section {
+    position: relative;
+    padding: 100px 0;
+    background: transparent;
+    margin-top: 300px;
+
+    .container-fluid {
+        position: relative;
+        z-index: 10;
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 100px;
+        }
+    }
+
+    .clothing-content {
+        padding-right: 50px;
+        position: relative;
+        z-index: 10;
+
+        .clothing-heading {
+            font-family: $font-family-unbounded;
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 1.2;
+            color: $color-black;
+            margin: 0 0 24px;
+            width: 100%;
+            max-width: 459px;
+        }
+
+        .clothing-description {
+            font-family: $font-family-nunito-sans;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: $color-gray-1;
+            margin: 0;
+            width: 100%;
+            max-width: 703px;
+        }
+    }
+
+    /* Desktop cards layout */
+    .clothing-cards-desktop {
+        display: none; // Hidden by default, shown on desktop via media query
+        gap: 20px;
+        position: relative;
+        z-index: 10;
+        align-items: stretch;
+    }
+
+    .clothing-swiper {
+        display: none; // Hidden on desktop
+        padding: 0;
+        position: relative;
+
+        .swiper-wrapper {
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            height: auto;
+        }
+
+        /* Nav/Pagination visible on mobile, hidden on lg+ */
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: $color-black;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, .06);
+            backdrop-filter: blur(2px);
+
+            &::after {
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+
+        .swiper-pagination {
+            position: relative;
+            margin-top: 16px;
+        }
+
+        .swiper-pagination-bullet {
+            background: rgba(0, 0, 0, .25);
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: $color-blue-1;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            background-color: $color-black;
+            color: $color-white;
+        }
+    }
+
+    /* Background decorative elements */
+    &::before {
+        content: '';
+        position: absolute;
+        top: -360px;
+        left: 360px;
+        right: 0;
+        bottom: 0;
+        background: url('/assets/svg/asset_07.svg') no-repeat;
+        background-size: 268px;
+        background-position: center;
+        z-index: 1;
+        pointer-events: none;
+    }
+}
+
+/* 1) Стоп переходов ширины/высоты у слайдера — частая причина дерганья */
+.clothing-swiper,
+.clothing-swiper .swiper-wrapper,
+.clothing-swiper .swiper-slide {
+  transition: none !important;     // не анимируем width/height
+}
+
+/* 2) Box-sizing, чтобы бордеры/паддинги не «раздували» вычисления */
+.clothing-section *, .clothing-section *::before, .clothing-section *::after {
+  box-sizing: border-box;
+}
+
+/* 3) Карточка — базово как было, НО без flex:1 глобально */
+.clothing-card {
+    background: $color-white;
+    border-radius: 16px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    max-width: 600px; // только для десктопного layout
+    border: 1px solid rgba(0, 0, 0, .08);
+    flex: 1;
+    height: auto;
+    &__title {
+        font-weight: 800;
+        font-family: $font-family-unbounded;
+        color: $color-blue-1;
+        margin: 0 0 8px;
+        font-size: 1.1rem;
+        letter-spacing: 0.02em;
+    }
+
+    &__material {
+        font-family: $font-family-nunito-sans;
+        font-size: 0.9rem;
+        color: $color-gray-1;
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0 0 16px;
+        padding: 0;
+        display: grid;
+        gap: 16px;
+    }
+
+    &__list .txt {
+        color: $color-black;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 280px;
+        margin: 8px auto 0;
+        line-height: 1.4;
+    }
+
+    &__note {
+        font-size: 0.8rem;
+        color: $color-gray-1;
+        padding-top: 16px;
+        text-align: center;
+        border-top: 1px solid rgba(0, 0, 0, .08);
+        margin-top: auto;
+    }
+
+    /* Specific price badge styling for clothing */
+    .price-badge {
+        display: inline-block;
+        background: #D6FF6C;
+        color: $color-black;
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-weight: 800;
+        font-family: $font-family-nunito-sans;
+        font-size: 0.9rem;
+    }
+}
+
+/* 4) Десктопный грид — тут как раз можно ограничить ширину и дать flex:1 */
+/* 5) Слайды на мобайле занимают всю ширину контейнера, карточка центрируется */
+.clothing-swiper .swiper-slide {
+  width: 100% !important;     // стабильно, без «авто-подсчётов»
+  display: flex;
+  justify-content: center;    // центруем карточку, если она уже контейнера
+}
+
+/* 6) Внутри слайдера убираем растяжение карточки по флексу */
+.clothing-swiper .clothing-card {
+  flex: none;          // иначе будет пытаться тянуться и спорить с шириной слайда
+  width: 100%;
+  max-width: 420px;    // аккуратная «рамка» для контента на мобайле
+  margin: 0 auto;
+}
+
+/* 7) На очень маленьких экранах — уже карточка, но всё ещё без влияния на ширину слайда */
+@media (max-width: 467.98px) {
+  .clothing-swiper .clothing-card {
+    max-width: 450px;
+  }
+}
+
+/* 8) Существующие брейкпоинты — без конфликтующих max-width на .clothing-card */
+@media (min-width: 1200px) {
+  .clothing-section {
+    .clothing-cards-desktop { display: flex !important; }
+    .clothing-swiper        { display: none !important; }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .clothing-section {
+    padding: 80px 0;
+    margin-top: 100px;
+    .row { padding: 0 50px !important; }
+    .clothing-cards-desktop { display: none !important; }
+    .clothing-swiper        { display: block !important; }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .clothing-section {
+    padding: 60px 0;
+    &::before{
+        left: 170px;
+        top: -250px;
+        background-size: 200px;
+    }
+    .clothing-content {
+      padding-right: 0;
+      margin-bottom: 140px;
+      text-align: left;
+    }
+    .row{
+        padding: 0 25px !important;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .clothing-section {
+    padding: 48px 0;
+    .row { flex-direction: column; padding: 0 !important; }
+    .clothing-content {
+      .clothing-heading   { font-size: 1.75rem; margin: 0 0 20px; }
+      .clothing-description { font-size: 0.95rem; }
+    }
+  }
 }
