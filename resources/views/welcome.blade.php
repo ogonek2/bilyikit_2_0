@@ -7,5 +7,8 @@
     @include('includes.elements.footwear-rest')
     @include('includes.elements.bags')
     @include('includes.elements.clothing')
-    @include('includes.elements.ptice_list')
+    @include('includes.elements.price_list')
+    @include('includes.elements.more-options')
+    @include('includes.elements.delivery')
+    @include('includes.elements.locations')
 @endsection
