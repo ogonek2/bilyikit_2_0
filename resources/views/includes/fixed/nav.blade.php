@@ -4,7 +4,8 @@
         <a class="navbar-brand d-flex align-items-center" href="#">
             <div class="logo-container me-3">
                 <div class="logo-circle">
-                    <svg width="137" height="69" viewBox="0 0 137 69" fill="none"
+                    <!-- Desktop Logo -->
+                    <svg class="logo-desktop" width="137" height="69" viewBox="0 0 137 69" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M57.6713 52.2753C57.6713 52.44 57.6438 52.5882 57.5944 52.7254C57.545 52.8626 57.4737 52.9779 57.3749 53.0767C57.2815 53.1755 57.1663 53.2523 57.0346 53.3072C56.9028 53.3621 56.7546 53.3896 56.59 53.3896H55.4263C55.3769 53.3896 55.355 53.3676 55.355 53.3237V49.734C55.355 49.6901 55.3769 49.6682 55.4208 49.6682H56.5021C56.826 49.6682 57.0894 49.7505 57.2761 49.9152C57.4627 50.0798 57.5615 50.3213 57.5615 50.6397C57.5615 50.7055 57.5505 50.7714 57.534 50.8373C57.5121 50.9031 57.4846 50.9745 57.4517 51.0349C57.4188 51.0952 57.3749 51.1611 57.3255 51.216C57.2761 51.2709 57.2267 51.3203 57.1663 51.3587C57.1608 51.3752 57.1608 51.3916 57.1718 51.4026C57.3364 51.4849 57.4627 51.6112 57.545 51.7704C57.6328 51.9295 57.6713 52.0997 57.6713 52.2753ZM57.062 50.6232C57.062 50.464 57.0126 50.3323 56.9193 50.239C56.8205 50.1457 56.6833 50.0963 56.4967 50.0963H55.9094C55.8764 50.0963 55.86 50.1128 55.86 50.1457V51.1282C55.86 51.1666 55.8764 51.1831 55.9094 51.1831H56.5021C56.6888 51.1831 56.8315 51.1282 56.9248 51.0184C57.0181 50.9086 57.062 50.7769 57.062 50.6232ZM57.1718 52.2973C57.1718 52.215 57.1608 52.1271 57.1388 52.0448C57.1169 51.9625 57.0785 51.8911 57.0291 51.8253C56.9742 51.7649 56.9083 51.71 56.826 51.6716C56.7436 51.6332 56.6394 51.6112 56.5186 51.6112H55.9148C55.8819 51.6112 55.8654 51.6277 55.8654 51.6606V52.8901C55.8654 52.9285 55.8819 52.945 55.9148 52.945H56.5845C56.7711 52.945 56.9138 52.8846 57.0181 52.7638C57.1224 52.6431 57.1718 52.4894 57.1718 52.2973Z"
@@ -139,9 +140,36 @@
 
         <!-- Call to Action Button -->
         <div class="navbar-nav">
-            <a class="btn btn-call" href="tel:+380000000000">
+            <span class="btn btn-call">
                 Зателефонуйте мені
-            </a>
+            </span>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggler d-lg-none" type="button" aria-controls="mobileNavbar" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-navbar" id="mobileNavbar">
+        <div class="mobile-nav-container">
+            <div class="mobile-nav-links">
+                <a class="mobile-nav-link" href="#about">ПРО КОТА</a>
+                <a class="mobile-nav-link" href="#footwear">ВЗУТТЯ</a>
+                <a class="mobile-nav-link" href="#bags">СУМКИ</a>
+                <a class="mobile-nav-link" href="#clothing">ОДЯГ</a>
+                <a class="mobile-nav-link" href="#repair">РЕМОНТ</a>
+                <a class="mobile-nav-link" href="#locations">ЛОКАЦІЇ</a>
+                <a class="mobile-nav-link" href="#faq">FAQ</a>
+                <a class="mobile-nav-link" href="#contacts">КОНТАКТИ</a>
+            </div>
+            <div class="mobile-nav-footer">
+                <a class="btn btn-call-mobile" href="tel:+380000000000">
+                    Зателефонуйте мені
+                </a>
+            </div>
         </div>
     </div>
 </nav>

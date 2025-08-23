@@ -1,6 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/price-mobile.js": "/js/price-mobile.js",
+    "/css/fixed-elements.css": "/css/fixed-elements.css",
     "/css/content.css": "/css/content.css",
     "/css/app.css": "/css/app.css"
 }

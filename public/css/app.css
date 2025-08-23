@@ -11,6 +11,7 @@ body {
   font-family: "Inter", "Roboto", sans-serif;
   line-height: 1.6;
   color: #333;
+  overflow-x: hidden;
 }
 
 h1,
@@ -123,6 +124,7 @@ th {
 }
 #app main {
   width: 100%;
+  margin-top: 100px;
 }
 #app main section, #app main footer {
   width: 100%;

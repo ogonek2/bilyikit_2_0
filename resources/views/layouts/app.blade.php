@@ -15,8 +15,12 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="{{ mix('css/content.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/fixed-elements.css') }}">
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="{{ mix('js/price-mobile.js') }}"></script>
+
+    <!-- Подключаем JavaScript для бургер-меню -->
+    <script src="{{ asset('js/navbar.js') }}"></script>
 
     <!-- Google Fonts Import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,13 +59,14 @@
 <body>
     <div id="app">
         @include('includes.fixed.nav')
+        
         <main class="py-4">
             @yield('content')
         </main>
         @include('includes.fixed.footer')
     </div>
 
-     @stack('scripts')
+    @stack('scripts')
 </body>
 
 </html>
