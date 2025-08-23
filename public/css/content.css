@@ -1314,6 +1314,14 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+@media (max-width: 767.98px) {
+  .price-section::before {
+    top: -200px;
+    bottom: -200px;
+    background-size: 1600px;
+    left: -400px;
+  }
+}
 .price-section .container-fluid {
   position: relative;
   padding: 0 !important;
@@ -1329,17 +1337,17 @@
 }
 @media (max-width: 1199.98px) and (max-width: 991.98px) {
   .price-section .container-fluid .row {
-    padding: 0 50px;
+    padding: 50px 50px;
   }
 }
 @media (max-width: 1199.98px) and (max-width: 991.98px) and (max-width: 767.98px) {
   .price-section .container-fluid .row {
-    padding: 0 25px;
+    padding: 50px 25px;
   }
 }
 @media (max-width: 1199.98px) and (max-width: 991.98px) and (max-width: 767.98px) and (max-width: 575.98px) {
   .price-section .container-fluid .row {
-    padding: 0 15px;
+    padding: 25px 15px;
   }
 }
 .price-section .container-fluid .row .price-heading {
@@ -1376,7 +1384,7 @@
 }
 @media (max-width: 767.98px) {
   .price-section .container-fluid .row .price-list {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: none !important;
   }
 }
 .price-section .container-fluid .row .price-list li {
@@ -1451,21 +1459,29 @@
   margin-left: 12px;
   font-family: "Nunito Sans", "Nunito", system-ui, -apple-system, sans-serif;
 }
-.price-section .container-fluid .row .price-list .mobile-price-button-wrapper {
+@media (max-width: 767.98px) {
+  .price-section .container-fluid .row .price-list .desktop-price-list {
+    display: none !important;
+  }
+  .price-section .container-fluid .row .price-list .mobile-price-button-wrapper {
+    display: block !important;
+  }
+}
+.price-section .container-fluid .row .mobile-price-button-wrapper {
   display: none;
   margin: 30px 0;
 }
 @media (max-width: 767.98px) {
-  .price-section .container-fluid .row .price-list .mobile-price-button-wrapper {
-    display: block;
+  .price-section .container-fluid .row .mobile-price-button-wrapper {
+    display: block !important;
   }
 }
-.price-section .container-fluid .row .price-list .mobile-price-button-wrapper .mobile-price-button {
+.price-section .container-fluid .row .mobile-price-button-wrapper .mobile-price-button {
   width: 100%;
   background: #333333;
   border: none;
-  border-radius: 50px;
-  padding: 16px 24px;
+  border-radius: 24px;
+  padding: 26px 24px;
   color: #ffffff;
   font-family: "Nunito Sans", "Nunito", system-ui, -apple-system, sans-serif;
   font-size: 1rem;
@@ -1476,82 +1492,23 @@
   align-items: center;
   justify-content: space-between;
 }
-.price-section .container-fluid .row .price-list .mobile-price-button-wrapper .mobile-price-button:hover {
+.price-section .container-fluid .row .mobile-price-button-wrapper .mobile-price-button:hover {
   background: rgba(51, 51, 51, 0.5803921569);
   transform: translateY(-2px);
 }
-.price-section .container-fluid .row .price-list .mobile-price-button-wrapper .mobile-price-button .button-text {
+.price-section .container-fluid .row .mobile-price-button-wrapper .mobile-price-button .button-text {
   flex: 1;
   text-align: left;
 }
-.price-section .container-fluid .row .price-list .mobile-price-button-wrapper .mobile-price-button .chevron-icon {
+.price-section .container-fluid .row .mobile-price-button-wrapper .mobile-price-button .chevron-icon {
   transition: transform 0.3s ease;
   flex-shrink: 0;
 }
-.price-section .container-fluid .row .price-list .mobile-price-button-wrapper .mobile-price-button.active .chevron-icon {
+.price-section .container-fluid .row .mobile-price-button-wrapper .mobile-price-button.active {
+  background: rgba(51, 51, 51, 0.5803921569);
+}
+.price-section .container-fluid .row .mobile-price-button-wrapper .mobile-price-button.active .chevron-icon {
   transform: rotate(180deg);
-}
-.price-section .container-fluid .row .price-list .mobile-price-list-wrapper {
-  display: none;
-  margin-top: 20px;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
-}
-@media (max-width: 767.98px) {
-  .price-section .container-fluid .row .price-list .mobile-price-list-wrapper {
-    display: block;
-  }
-}
-.price-section .container-fluid .row .price-list .mobile-price-list-wrapper .mobile-price-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.price-section .container-fluid .row .price-list .mobile-price-list-wrapper .mobile-price-list .price-item {
-  background: #333333;
-  border-radius: 8px;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  position: relative;
-}
-.price-section .container-fluid .row .price-list .mobile-price-list-wrapper .mobile-price-list .price-item .item-number {
-  font-family: "Unbounded", "Inter", "Roboto", system-ui, -apple-system, sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-  padding: 8px 12px;
-  min-width: 40px;
-  text-align: center;
-  flex-shrink: 0;
-}
-.price-section .container-fluid .row .price-list .mobile-price-list-wrapper .mobile-price-list .price-item .item-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.price-section .container-fluid .row .price-list .mobile-price-list-wrapper .mobile-price-list .price-item .item-content .item-title {
-  font-family: "Nunito Sans", "Nunito", system-ui, -apple-system, sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #ffffff;
-  line-height: 1.3;
-}
-.price-section .container-fluid .row .price-list .mobile-price-list-wrapper .mobile-price-list .price-item .item-content .item-price {
-  font-family: "Nunito Sans", "Nunito", system-ui, -apple-system, sans-serif;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 400;
-}
-@media (max-width: 767.98px) {
-  .price-section .container-fluid .row .price-list .desktop-price-list {
-    display: none !important;
-  }
 }
 
 .address-list {
@@ -2791,5 +2748,205 @@
   .contacts-section + .footer {
     margin-top: 0;
     padding-top: 40px;
+  }
+}
+.mobile-price-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+@media (min-width: 768px) {
+  .mobile-price-modal {
+    display: none !important;
+  }
+}
+.mobile-price-modal .modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+}
+.mobile-price-modal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  max-height: 80vh;
+  background: #171717;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+.mobile-price-modal .modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: #333333;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.mobile-price-modal .modal-content .modal-header .modal-title {
+  font-family: "Unbounded", "Inter", "Roboto", system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+.mobile-price-modal .modal-content .modal-header .modal-close {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.mobile-price-modal .modal-content .modal-header .modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+.mobile-price-modal .modal-content .modal-header .modal-close svg {
+  width: 20px;
+  height: 20px;
+}
+.mobile-price-modal .modal-content .modal-body {
+  padding: 24px;
+  max-height: calc(80vh - 100px);
+  overflow-y: auto;
+}
+.mobile-price-modal .modal-content .modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+.mobile-price-modal .modal-content .modal-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+.mobile-price-modal .modal-content .modal-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+.mobile-price-modal .modal-content .modal-body::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.mobile-price-modal .modal-content .modal-body .mobile-price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mobile-price-modal .modal-content .modal-body .mobile-price-list .price-item {
+  background: #333333;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+.mobile-price-modal .modal-content .modal-body .mobile-price-list .price-item:hover {
+  background: rgba(51, 51, 51, 0.5803921569);
+  transform: translateY(-2px);
+}
+.mobile-price-modal .modal-content .modal-body .mobile-price-list .price-item .item-number {
+  font-family: "Unbounded", "Inter", "Roboto", system-ui, -apple-system, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px 12px;
+  min-width: 44px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.mobile-price-modal .modal-content .modal-body .mobile-price-list .price-item .item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.mobile-price-modal .modal-content .modal-body .mobile-price-list .price-item .item-content .item-title {
+  font-family: "Nunito Sans", "Nunito", system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.3;
+}
+.mobile-price-modal .modal-content .modal-body .mobile-price-list .price-item .item-content .item-price {
+  font-family: "Nunito Sans", "Nunito", system-ui, -apple-system, sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+}
+.mobile-price-modal.active {
+  display: block !important;
+  animation: modalFadeIn 0.3s ease-out;
+}
+.mobile-price-modal.active .modal-content {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (max-width: 480px) {
+  .mobile-price-modal .modal-content {
+    width: 95%;
+    max-width: none;
+  }
+  .mobile-price-modal .modal-content .modal-header {
+    padding: 16px 20px;
+  }
+  .mobile-price-modal .modal-content .modal-header .modal-title {
+    font-size: 1.1rem;
+  }
+  .mobile-price-modal .modal-content .modal-header .modal-close {
+    width: 36px;
+    height: 36px;
+  }
+  .mobile-price-modal .modal-content .modal-body {
+    padding: 20px;
+  }
+  .mobile-price-modal .modal-content .modal-body .mobile-price-list .price-item {
+    padding: 14px 16px;
+  }
+  .mobile-price-modal .modal-content .modal-body .mobile-price-list .price-item .item-number {
+    font-size: 1rem;
+    min-width: 40px;
+    padding: 6px 10px;
+  }
+  .mobile-price-modal .modal-content .modal-body .mobile-price-list .price-item .item-content .item-title {
+    font-size: 0.95rem;
+  }
+  .mobile-price-modal .modal-content .modal-body .mobile-price-list .price-item .item-content .item-price {
+    font-size: 0.85rem;
   }
 }

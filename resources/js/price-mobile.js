@@ -1,34 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
     const mobilePriceButton = document.getElementById('mobilePriceButton');
-    const mobilePriceList = document.getElementById('mobilePriceList');
+    const mobilePriceModal = document.getElementById('mobilePriceModal');
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalClose = document.getElementById('modalClose');
     
-    if (mobilePriceButton && mobilePriceList) {
+    console.log('Mobile Price Button:', mobilePriceButton);
+    console.log('Mobile Price Modal:', mobilePriceModal);
+    
+    if (mobilePriceButton && mobilePriceModal) {
+        // Открытие модального окна при клике на кнопку
         mobilePriceButton.addEventListener('click', function() {
-            // Переключаем состояние кнопки
-            this.classList.toggle('active');
-            
-            // Показываем/скрываем список цен
-            if (this.classList.contains('active')) {
-                mobilePriceList.style.display = 'block';
-                // Плавная анимация появления
-                mobilePriceList.style.opacity = '0';
-                mobilePriceList.style.transform = 'translateY(-10px)';
-                
-                setTimeout(() => {
-                    mobilePriceList.style.transition = 'all 0.3s ease';
-                    mobilePriceList.style.opacity = '1';
-                    mobilePriceList.style.transform = 'translateY(0)';
-                }, 10);
-            } else {
-                // Плавная анимация скрытия
-                mobilePriceList.style.transition = 'all 0.3s ease';
-                mobilePriceList.style.opacity = '0';
-                mobilePriceList.style.transform = 'translateY(-10px)';
-                
-                setTimeout(() => {
-                    mobilePriceList.style.display = 'none';
-                }, 300);
+            mobilePriceModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Блокируем скролл страницы
+        });
+        
+        // Закрытие модального окна при клике на крестик
+        if (modalClose) {
+            modalClose.addEventListener('click', closeModal);
+        }
+        
+        // Закрытие модального окна при клике на overlay
+        if (modalOverlay) {
+            modalOverlay.addEventListener('click', closeModal);
+        }
+        
+        // Закрытие модального окна при нажатии Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobilePriceModal.classList.contains('active')) {
+                closeModal();
             }
         });
+        
+        function closeModal() {
+            mobilePriceModal.classList.remove('active');
+            document.body.style.overflow = ''; // Восстанавливаем скролл страницы
+        }
     }
 });
