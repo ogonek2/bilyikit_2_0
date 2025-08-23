@@ -25,12 +25,7 @@
 
                     <!-- Call to Action Button -->
                     <div class="cta-container">
-                        <button class="btn btn-courier">
-                            <span>Викликати кур'єра</span>
-                            <div class="arrow-circle">
-                                <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </button>
+                        @include('includes.buttons.courier-button')
                     </div>
                 </div>
             </div>

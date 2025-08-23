@@ -118,9 +118,6 @@ th {
     box-sizing: border-box;
 }
 
-// Import content styles
-@import 'content.scss';
-
 // Lemon Tuesday Font Class
 .lemon-tuesday {
     font-family: 'Lemon Tuesday', 'Caveat', 'Brush Script MT', cursive;
@@ -136,22 +133,22 @@ th {
     main {
         width: 100%;
 
-        section {
+        section, footer {
             width: 100%;
             padding: 0 0;
-
-            .container-fluid {
-                width: 100%;
-                padding: 25px 15px;
-
-                .row {
-                    width: 100%;
-                    max-width: 1920px;
-                    margin: 0 auto;
-                    position: relative;
-                }
-            }
         }
+    }
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 25px 15px;
+
+    .row {
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        position: relative;
     }
 }
 
@@ -174,3 +171,59 @@ th {
     user-select: none;
     /* стандартное свойство */
 }
+
+.btn-courier {
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: all 0.1s ease-in;
+
+    &:hover {
+        transform: translateY(-2px);
+
+        span {
+            background: $color-blue-2;
+            box-shadow: 0 8px 30px rgba(0, 123, 255, 0.2);
+            color: #ffffff;
+        }
+    }
+
+    span {
+        background: $color-blue-1;
+        color: $color-white;
+        border: none;
+        padding: 1.25rem 2.5rem;
+        height: 60px;
+        border-radius: 50px;
+        font-family: $font-family-unbounded;
+        font-size: 16px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3);
+    }
+
+    .arrow-circle {
+        width: 60px;
+        height: 60px;
+        background: #4251DE;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+
+        i {
+            font-size: 1rem;
+            color: $color-white;
+        }
+    }
+
+    &:hover .arrow-circle {
+        background: $color-blue-2;
+        box-shadow: 0 8px 30px rgba(0, 123, 255, 0.2);
+    }
+}
+

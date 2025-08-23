@@ -11,4 +11,7 @@
     @include('includes.elements.more-options')
     @include('includes.elements.delivery')
     @include('includes.elements.locations')
+    @include('includes.elements.faq')
+    @include('includes.elements.contacts')
+    
 @endsection

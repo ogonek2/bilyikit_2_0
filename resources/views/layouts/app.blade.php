@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="{{ mix('css/content.css') }}">
     <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('js/price-mobile.js') }}"></script>
 
     <!-- Google Fonts Import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,6 +58,7 @@
         <main class="py-4">
             @yield('content')
         </main>
+        @include('includes.fixed.footer')
     </div>
 
      @stack('scripts')
