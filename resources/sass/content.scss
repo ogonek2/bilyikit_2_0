@@ -46,8 +46,16 @@
                 }
             }
 
-            @media screen and (max-width: 1200px) {
-                padding: 0 0;
+            @media (max-width: 1200px) {
+                padding: 0 50px;
+            }
+            
+            @media (max-width: 991.98px) {
+                padding: 0 25px;
+            }
+            
+            @media (max-width: 767.98px) {
+                padding: 0 15px;
             }
         }
     }
@@ -223,7 +231,15 @@
             padding: 0 100px;
 
             @media (max-width: 1200px) {
-                padding: 0 20px;
+                padding: 0 50px;
+            }
+            
+            @media (max-width: 991.98px) {
+                padding: 0 25px;
+            }
+            
+            @media (max-width: 767.98px) {
+                padding: 0 15px;
             }
         }
     }
@@ -575,8 +591,20 @@
 /* Footwear Section */
 .footwear-section {
     position: relative;
-    padding: 0 0 !important;
+    padding: 100px 0;
     background: transparent; // пустой фон
+    
+    @media (max-width: 1200px) {
+        padding: 80px 0;
+    }
+    
+    @media (max-width: 991.98px) {
+        padding: 60px 0;
+    }
+    
+    @media (max-width: 767.98px) {
+        padding: 48px 0;
+    }
 
     .container-fluid {
         position: relative;
@@ -616,6 +644,18 @@
     /* Swiper container */
     .footwear-swiper {
         padding: 140px 100px 0;
+
+        @media (max-width: 1200px) {
+            padding: 140px 50px 0;
+        }
+        
+        @media (max-width: 991.98px) {
+            padding: 140px 25px 0;
+        }
+        
+        @media (max-width: 767.98px) {
+            padding: 140px 15px 0;
+        }
 
         .swiper-wrapper {
             align-items: stretch;
@@ -845,6 +885,18 @@
 
     .row {
         padding: 0 100px !important;
+        
+        @media (max-width: 1200px) {
+            padding: 0 50px !important;
+        }
+        
+        @media (max-width: 991.98px) {
+            padding: 0 25px !important;
+        }
+        
+        @media (max-width: 767.98px) {
+            padding: 0 15px !important;
+        }
     }
 
     &__illustration {
@@ -1007,10 +1059,10 @@
 
 @media (max-width: 767.98px) {
     .footwear-rest {
-        padding: 0 !important;
+        padding: 48px 0;
 
         .row {
-            padding: 0 0 !important;
+            padding: 0 15px;
         }
 
         &__controls {
@@ -1037,10 +1089,22 @@
 /* Bags Section (slider similar to footwear) */
 .bags-section {
     position: relative;
-    padding: 0 0 !important;
+    padding: 100px 0;
     background: transparent;
     margin-top: 300px;
     @media (max-width: 1370px) {margin-top: 100px;}
+    
+    @media (max-width: 1200px) {
+        padding: 80px 0;
+    }
+    
+    @media (max-width: 991.98px) {
+        padding: 60px 0;
+    }
+    
+    @media (max-width: 767.98px) {
+        padding: 48px 0;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -1057,7 +1121,7 @@
 
     .container-fluid {
         position: relative;
-        padding: 0 !important;
+        padding: 0;
         overflow: visible; // Разрешаем дочерним элементам выходить за границы
         z-index: 10;
         background-color: $color-dark-2;
@@ -1082,6 +1146,18 @@
 
     .bags-swiper {
         padding: 50px 100px 0;
+        
+        @media (max-width: 1200px) {
+            padding: 50px 50px 0;
+        }
+        
+        @media (max-width: 991.98px) {
+            padding: 50px 25px 0;
+        }
+        
+        @media (max-width: 767.98px) {
+            padding: 50px 15px 0;
+        }
 
         .swiper-wrapper {
             align-items: stretch;
@@ -1275,6 +1351,18 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 100px;
+            
+            @media (max-width: 1200px) {
+                padding: 0 50px;
+            }
+            
+            @media (max-width: 991.98px) {
+                padding: 0 25px;
+            }
+            
+            @media (max-width: 767.98px) {
+                padding: 0 15px;
+            }
         }
     }
 
@@ -1549,7 +1637,7 @@
 
         .row {
             flex-direction: column;
-            padding: 0 !important;
+            padding: 0 15px;
         }
 
         .clothing-content {
@@ -1569,9 +1657,21 @@
 /* Bags Section (slider similar to footwear) */
 .price-section {
     position: relative;
-    padding: 0 0 !important;
+    padding: 100px 0;
     background: transparent;
     margin-top: 300px;
+    
+    @media (max-width: 1200px) {
+        padding: 80px 0;
+    }
+    
+    @media (max-width: 991.98px) {
+        padding: 60px 0;
+    }
+    
+    @media (max-width: 767.98px) {
+        padding: 48px 0;
+    }
 
     &::before {
         content: '';
@@ -1595,7 +1695,7 @@
 
     .container-fluid {
         position: relative;
-        padding: 0 !important;
+        padding: 0;
         z-index: 10;
         background-color: $color-dark-2;
 
@@ -1607,17 +1707,19 @@
             background-size: 60%;
 
             @media (max-width: 1199.98px) {
-                @media (max-width: 991.98px) {
-                    padding: 50px 50px;
-
-                    @media (max-width: 767.98px) {
-                        padding: 50px 25px;
-
-                        @media (max-width: 575.98px) {
-                            padding: 25px 15px;
-                        }
-                    }
-                }
+                padding: 50px 50px;
+            }
+            
+            @media (max-width: 991.98px) {
+                padding: 50px 25px;
+            }
+            
+            @media (max-width: 767.98px) {
+                padding: 50px 15px;
+            }
+            
+            @media (max-width: 575.98px) {
+                padding: 25px 15px;
             }
 
             .price-heading {
@@ -1971,15 +2073,39 @@
 /* more_option Section */
 .more_option-section {
     position: relative;
-    padding: 0 0 !important;
+    padding: 100px 0;
     background: transparent; // пустой фон
     margin-top: 200px;
+    
+    @media (max-width: 1200px) {
+        padding: 80px 0;
+    }
+    
+    @media (max-width: 991.98px) {
+        padding: 60px 0;
+    }
+    
+    @media (max-width: 767.98px) {
+        padding: 48px 0;
+    }
 
     .container-fluid {
         position: relative;
 
         .row {
             padding: 0 100px;
+            
+            @media (max-width: 1200px) {
+                padding: 0 50px;
+            }
+            
+            @media (max-width: 991.98px) {
+                padding: 0 25px;
+            }
+            
+            @media (max-width: 767.98px) {
+                padding: 0 15px;
+            }
 
             .blue-blocks {
                 margin-top: 32px;
@@ -2165,7 +2291,7 @@
     .more_option-section {
         .container-fluid {
             .row {
-                padding: 0 !important;
+                padding: 0 15px;
             }
         }
     }
@@ -2197,12 +2323,20 @@
 }
 
 .delivery-section {
-    padding: 100px 0 50px !important;
-
-    @media (max-width: 767.98px) {
-        padding: 0 !important;
-    }
+    padding: 100px 0 50px;
     position: relative;
+    
+    @media (max-width: 1200px) {
+        padding: 80px 0 40px;
+    }
+    
+    @media (max-width: 991.98px) {
+        padding: 60px 0 30px;
+    }
+    
+    @media (max-width: 767.98px) {
+        padding: 48px 0 20px;
+    }
 
     .container-fluid {}
 
@@ -2213,6 +2347,18 @@
         justify-content: space-between;
         gap: 40px;
         padding: 0 100px;
+        
+        @media (max-width: 1200px) {
+            padding: 0 50px;
+        }
+        
+        @media (max-width: 991.98px) {
+            padding: 0 25px;
+        }
+        
+        @media (max-width: 767.98px) {
+            padding: 0 15px;
+        }
         &::before{
             content: '';
             position: absolute;
@@ -2488,10 +2634,22 @@
 /* Locations Section */
 .locations-section {
     position: relative;
-    padding: 0 0 !important;
+    padding: 100px 0;
     background: transparent;
     display: flex;
     flex-direction: column;
+    
+    @media (max-width: 1200px) {
+        padding: 80px 0;
+    }
+    
+    @media (max-width: 991.98px) {
+        padding: 60px 0;
+    }
+    
+    @media (max-width: 767.98px) {
+        padding: 48px 0;
+    }
 
     &::after {
         content: '';
@@ -2512,7 +2670,7 @@
 
     .container-fluid {
         position: relative;
-        padding: 0 !important;
+        padding: 0;
         z-index: 10;
         background-color: $color-dark-2;
 
@@ -2522,6 +2680,18 @@
             background-repeat: no-repeat;
             background-position: 140%;
             background-size: 60%;
+            
+            @media (max-width: 1200px) {
+                padding: 80px 50px;
+            }
+            
+            @media (max-width: 991.98px) {
+                padding: 80px 25px;
+            }
+            
+            @media (max-width: 767.98px) {
+                padding: 80px 15px;
+            }
 
             .locations-heading {
                 font-family: $font-family-unbounded;
@@ -2659,9 +2829,13 @@
             @media (max-width: 1200px) {
                 padding: 0 50px;
             }
+            
+            @media (max-width: 991.98px) {
+                padding: 0 25px;
+            }
 
             @media (max-width: 767.98px) {
-                padding: 0 30px;
+                padding: 0 15px;
             }
         }
     }
@@ -2876,9 +3050,13 @@
                 padding: 0 50px;
                 gap: 40px;
             }
+            
+            @media (max-width: 991.98px) {
+                padding: 0 25px;
+            }
 
             @media (max-width: 767.98px) {
-                padding: 0 20px;
+                padding: 0 15px;
                 gap: 30px;
                 flex-direction: column;
             }
@@ -3187,7 +3365,7 @@
 
         .container-fluid {
             .row {
-                padding: 0 !important;
+                padding: 0 15px;
             }
         }
 
@@ -3239,9 +3417,21 @@
 .footer {
     background: $color-black;
     color: $color-white;
-    padding: 0 !important;
+    padding: 40px 0;
     position: relative;
     z-index: 1;
+    
+    @media (max-width: 1200px) {
+        padding: 30px 0;
+    }
+    
+    @media (max-width: 991.98px) {
+        padding: 25px 0;
+    }
+    
+    @media (max-width: 767.98px) {
+        padding: 20px 0;
+    }
 
     .container-fluid {
         .row {
@@ -3253,9 +3443,13 @@
             @media (max-width: 1200px) {
                 padding: 0 50px;
             }
+            
+            @media (max-width: 991.98px) {
+                padding: 0 25px;
+            }
 
             @media (max-width: 767.98px) {
-                padding: 0 20px;
+                padding: 0 15px;
                 flex-direction: column;
                 gap: 20px;
                 text-align: center;
